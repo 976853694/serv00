@@ -93,8 +93,8 @@ async def main():
 
         now_beijing = format_to_iso(datetime.utcnow() + timedelta(hours=8))
         if is_logged_in:
-            message += f"✅*{serviceName}*账号 *{username}* 于北京时间 {now_beijing}登录面板成功！\n\n"
-            print(f"{serviceName}账号 {username} 于北京时间 {now_beijing}登录面板成功！")
+            message += f"✅*{serviceName}*账号 *{username}* 在 {now_beijing}登录面板成功！\n\n"
+            print(f"{serviceName}账号 {username} 在 {now_beijing}登录面板成功！")
         else:
             message += f"❌*{serviceName}*账号 *{username}* 于北京时间 {now_beijing}登录失败\n\n❗请检查*{username}*账号和密码是否正确。\n\n"
             print(f"{serviceName}账号 {username} 登录失败，请检查{serviceName}账号和密码是否正确。")
@@ -132,8 +132,8 @@ async def send_telegram_message(message):
             'inline_keyboard': [
                 [
                     {
-                        'text': '问题反馈❓',
-                        'url': 'https://t.me/yxjsjl'  # 点击按钮后跳转到问题反馈的链接
+                        'text': '六趣博客',
+                        'url': 'https://bbs.6qu.cc'  # 点击按钮后跳转到问题反馈的链接
                     }
                 ]
             ]
